@@ -1,0 +1,103 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regalo para mi Novia</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fbe7c6;
+      margin: 0;
+    }
+    #wrapper {
+      text-align: center;
+    }
+    h1 {
+      color: #fe6d73;
+      margin-bottom: 20px;
+    }
+    #subtitle {
+      font-size: 18px;
+      color: #6d6d6d;
+      margin-bottom: 20px;
+    }
+    #menu, .content {
+      text-align: center;
+    }
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background-color: #fe6d73;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    button:hover {
+      background-color: #ea5c5f;
+    }
+    .content {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Para Joselyn💗💗</h1>
+    <div id="subtitle" contenteditable="true">Mi Querida Estrellita, mi solecito, mi cielito lindo, este espacio esta creado solo para ti, aprendi a hacer esto solo para ti y espero te guste💕</div>
+    <div id="menu" class="active">
+      <button onclick="showText('texto1')">Pequeño Mensaje</button>
+      <button onclick="showText('texto2')">Por si un dia te lo preguntas...</button>
+      <button onclick="showText('texto3')">Un Poema para ti💕</button>
+    </div>
+    
+    <div id="texto1" class="content">
+      <h1>Para ti, mi niña</h1>
+      <p>Tal vez no es tiempo para este tipo de cosas, pero las hago para que veas que sigo teniendo el mismo interes hacia ti y sepas que nunca te dejare de amar,no quiero esperar otra vida para que funcione contigo, por que te aseguro que hare todo por que las cosas funcionen contigo, solo contigo, siempre contigo❤️
+      olvide agregar, quiero dedicarte esta cancion, solo pega el link en google para que puedas escucharla. ya que sobran motivos para amarte y quiero estar contigo hasta el fin del mundo💗💗   <a href="https://www.youtube.com/watch?v=JsAgrlr1RO4&ab_channel=EleganteRecords" target="_blank">Escucha aquí</a></p>
+      <button onclick="returnToMenu()">Volver al menú</button>
+    </div>
+    
+    <div id="texto2" class="content">
+      <h1>Mi Cielito...</h1>
+      <p>Por si un dia te lo preguntas o si llegas a tener dudas, lee este mensaje: te amo, mucho y con toda el alma❤️❤️</p>
+      <button onclick="returnToMenu()">Volver al menú</button>
+    </div>
+    
+    <div id="texto3" class="content">
+      <h1>Para mi solecito...</h1>
+      <p>Eres mis momentos mas preciados, mi razon de amar la persona que veo a los ojos y decido que es con ella que mi vida quiero formar. mantente junto a mi, mi corazon palpita mejor teniendote cerca, mas estable, mas delicado, mas devoto que con cualquiera. cuando tomaba tu mano y caminabamos por cualquier rumbo, o cuando comiamos callados disfrutando del sin sentido placer de estar a tu lado, entendi por fi que tu eres el amor que tanto tiempo habia anhelado. eres como ese sentimiento que siento al cerrar mis ojos recostado cerca del mar, tu eres mi paz, me gusta como nuestras manos conversan con caricias sutiles cuando caminamos por la calle. no me sueltes, no te alejes, solo dame un minuto mas en tus brazos, no me sueltes hasta que tu olor se adhiera a mi. suelo escribirte cartas para que mi yo futuro nunca olvide lo mucho que siento por ti. incluso si pierdo la memora, mi corazon reconoceria tu esencia al acercarse a ti, eres esa persona con la que mi alma se siente en casa libre y sin mascara, y hoy te confieso que mi amor por ti, todo obstaculo sobrepasa❤️.</p>
+      <button onclick="returnToMenu()">Volver al menú</button>
+    </div>
+  </div>
+
+  <script>
+    function showText(id) {
+      document.querySelector('#menu').classList.remove('active');
+      document.querySelectorAll('.content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.querySelector(`#${id}`).classList.add('active');
+    }
+    function returnToMenu() {
+      document.querySelectorAll('.content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.querySelector('#menu').classList.add('active');
+    }
+  </script>
+</body>
+</html>
+```
